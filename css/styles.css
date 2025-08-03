@@ -101,20 +101,19 @@ img {
     padding: 24px 0;
     display: block;
 }
-.nav-item {
+.nav-active {
     position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-item::after {
+.nav-active::after {
     content: "";
     width: 100%;
     position: absolute;
     left: 0;
     bottom: -1px;
     border-radius: 2px;
-    width: 48px;
     height: 4px;
     background-color: #404bbf;
 
