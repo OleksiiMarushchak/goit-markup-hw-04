@@ -309,9 +309,9 @@ img {
     display: flex;
     
 }
-.elipse:hover {
+.elipse:hover, .elipse:active{
     background-color: #404bbf;
-}
+} 
 .social-link-icon {
 
 }
@@ -434,6 +434,7 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+
 }
 .social-link-title {
     font-size: 16px;
@@ -443,6 +444,7 @@ img {
     letter-spacing: 0.02em;
     color: #fff;
     font-weight: 500;
+    margin-bottom: 16px;
 }
 .footer-social-link-list {
     gap: 16px;
@@ -452,4 +454,13 @@ img {
 }
 .social-link-item:hover  .footer-elipse{
     background-color: #31d0aa;
+}
+.social-link-item {
+    transition: background-color 250ms ease-in-out;
+}
+.social-link-item:active .footer-elipse {
+    background-color: #31d0aa;
+}
+.social-link-item:hover .social-link-icon {
+    fill: #f4f4fd;
 }
