@@ -14,6 +14,8 @@ ol {
 
 a {
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -96,7 +98,20 @@ img {
     padding: 24px 0;
     display: block;
 }
-
+.now-page {
+    color: #404bbf;padding: 24px 0 0px;
+    
+}
+.now-page::after {
+    content: "";
+    margin-top: 20px;
+    display: block;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+        /* Прижимает полоску к низу */
+}
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
@@ -129,9 +144,12 @@ img {
 
 /* === HERO SECTION === */
 .page-hero {
-    background-color: #2e2f42;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
 }
 
 .hero-title {
@@ -195,7 +213,20 @@ img {
     width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
 }
+.our-work-icon-container {
+    border: 1px solid #8e8f99;
+        border-radius: 4px;
+        background-color: #f4f4fd;
+        padding: 23px 0;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.our-work-icon {
+    height: 64px;
+    width: 64px;
+}
 .list-title {
     font-weight: 500;
     font-size: 20px;
@@ -265,9 +296,39 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;text-align: center;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px
 }
 
+.social-link-list {
+    display: flex;
+    gap: 24px;
+    height: 40px;justify-content: center;
+}
+.elipse {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.elipse:hover {
+    background-color: #404bbf;
+}
+.social-link-icon {
+    height: 16px;
+    width: 16px;
+
+}
+.icon-svg {
+    fill: #F4F4FD;
+    height: 16px;
+    width: 16px;
+}
 /* === SECTION: PORTFOLIO === */
 .section-portfolio {
     padding-top: 120px;
@@ -321,13 +382,18 @@ img {
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
+
 }
 
 .footer-container {
-    max-width: 264px;
-    align-content: start;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
 }
-
+.footer-text {
+    margin-right: 120px;
+    min-width: 264px;
+}
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -351,4 +417,17 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+}
+.social-link-title {
+    font-size: 16px;
+    
+    /* line-height: 24px; */
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.footer-social-icon {
+    width: 24px;
+    height: 24px;
 }
