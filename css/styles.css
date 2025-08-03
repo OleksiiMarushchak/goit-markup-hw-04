@@ -55,14 +55,14 @@ img {
 /* === HEADER === */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .head-container {
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
@@ -101,7 +101,24 @@ img {
     padding: 24px 0;
     display: block;
 }
+.nav-item {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.nav-item::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+
+}
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
@@ -125,6 +142,7 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
     padding: 24px 0;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -215,6 +233,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 8px;
 }
 
 .our-work-icon {}
@@ -311,7 +330,7 @@ img {
 }
 
 .elipse:hover,
-.elipse:active {
+.elipse:focus {
     background-color: #404bbf;
 }
 
@@ -453,7 +472,7 @@ img {
 }
 
 .footer-elipse:hover,
-.footer-elipse:active {
+.footer-elipse:focus {
     background-color: #31d0aa;
 }
 
